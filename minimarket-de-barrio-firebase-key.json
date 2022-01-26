@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "minimarket-de-barrio",
+  "private_key_id": "6947d0fe750369d2387f584b337b3e5e6732135a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDnXm9ryPtmr2Fj\nqIfwTMVPGgL39uNZ2jJgtk251gk9zB7+dVf/QuUynBpC0JXxyyDKPKnukNWdS/CB\nP3MNKjgG8ahZFPxYtK1P5cIhdL2guAqEL69jAQ2LCfCpiAhT1yoZD+GKzOt/g6QY\ndDXojahqQF2ngvJG+vGNfO7N5SHCCkyznzrfC5gVD38s0U+rwSHFSX/tYR6/4GrD\n3Teua+C3tqQNThLT8yXkBM/iogVcx0M4lvY45i8rrWpvHsgpBgf/ICLK6ZRuz7KV\ndxMD936UksQ7yWBN2S87dlJge5kgNOuuy+bbw687PRXeZiJ3Y/47maqZVJ0PkDk0\ngsnd3bddAgMBAAECggEAC6jap0KNnh3LI/aOQzHbOk1D8QhkFKxw9XwPwVm5RX/6\niornUFnSqxDq0eB+bfJKnhEd5IPaqqlKXs5lFzjAHLl46Q8BrdwND9sIRB9Z9GDR\n8YS7AJuWTyIacAYG8BKxGxTjIize1qI6VsZ5y6piiQLitVpdU0O6KziB4FENDnYr\nN5Rb5njeQ8aNhc5cSULYNigw79eaRjLwRhWfwdJZAkvWwytV/OfxfyEFMMHrc8Am\nK2DhHOKhKzLw61aZ2i+oVEngwgoSvMCvc5AmvxorYsh11HiIGqjlN5RnwNcIgwK9\nrvxbcSuNFGZKbO1ZxMBNdEi/qCkyw7tnsDyM4+UogQKBgQD1j4ivFwb92n8UBrp0\nXRKkOjcd37HWHliIX0gNPpAQC9Qlcd/2uwk26JEB8DUIDLb3C0VuQWG6mLhDwkHO\nE3R2ik73z/exy9xl3Kng/RjQ1blwuWJEjEt2fTdfHMyEIbAQSBJRMSBIcT5sm7+E\nJIxR3MctWHNdzOVcO2dwlO6v+QKBgQDxNHNKwsp2UO2KVTnv50t4MdlM3SvdNpJw\n8BACsJmN9dF2hPGV7d+ecMRks43WvJzpnfD2n0aYgHMF8WwGh1gd6g1xk0VvmD8k\ntLLD6admXA62CK3b8qvOaPWE/vJCNPB+qkL01m8I80fSP3bePPpvWRIN+jmXjaKj\n2QywYAdjhQKBgQDi9v2gx6ngrDlUqztfHj+Cp4QWCpH2lCnEMj0IcND649P7oBsf\nk5Raue59WiXKAOaDxFkyJSBNNabqifwEmxrEDeYbSo9oOELHq4Mgvw5Wx5QUymQ3\nc2y0Ydvx/05QukpfYh38CWoLSxAllncXjihb6bH3CY/oHN/JteZPung7EQKBgQCb\nHpMiukEAdC0/sG2xJjt30f8gmoBSJH1rGkgBotct36/Um8zOEguk1nrHFF4cgnIb\nH9LOmEILY1gVs1w4mqQFoPcCWqbmDLBXB8qLieF5R6zCTrSY5eittvxmipr8DxW3\nMAIdeSYxSFuhD+V/KRIZt9uPl6OgHptA6h5p82ftDQKBgAvOi+ndhhFC2vXVnFJf\nktWXW+cuFdigVLkdrMbVPefPFkSEEqPXsWrulLp+xtP9w/D5VygHfzdpmDqEvYUu\n+ypW0S7diIUjeoihNmFbynpKFRu55pmibMqWsgOipXZiXmosxgo1LF3WyT9v1z4M\n31cJvbbXWcCY66hTzwwFeYIK\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-3n635@minimarket-de-barrio.iam.gserviceaccount.com",
+  "client_id": "106242431042958182085",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-3n635%40minimarket-de-barrio.iam.gserviceaccount.com"
+}
