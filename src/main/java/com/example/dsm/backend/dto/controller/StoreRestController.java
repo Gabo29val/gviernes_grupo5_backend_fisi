@@ -33,6 +33,12 @@ public class StoreRestController {
         return new ResponseEntity<String>(id, HttpStatus.OK);
     }
 
+    @GetMapping(value = "/stores/{lat},{lon},{radius}")
+    public List<StoreDTO> getTiendasCercanas(@PathVariable Double lat, @PathVariable Double lon, @PathVariable Double radius) throws Exception {
+        return storeServiceAPI.getCloseStores(lat, lon, radius);
+        //return "Latitud: " + lat + ", Longitud: " + lon + " radius: " + radius;
+    }
+
     @GetMapping(value = "/all")
     public List<StoreDTO> getAll() throws Exception {
         return storeServiceAPI.getAll();
