@@ -12,70 +12,77 @@ import java.util.Map;
 
 public abstract class GenericServiceImpl<I, O> implements GenericServiceAPI<I, O> {
 
-	public Class<O> clazz;
+    public Class<O> clazz;
 
-	@SuppressWarnings("unchecked")
-	public GenericServiceImpl() {
-		this.clazz = ((Class<O>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[1]);
-	}
+    @SuppressWarnings("unchecked")
+    public GenericServiceImpl() {
+        this.clazz = ((Class<O>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[1]);
+    }
 
-	@Override
-	public String save(I entity) throws Exception {
-		return this.save(entity, null);
-	}
+    @Override
+    public String save(I entity) throws Exception {
+        return getCollection().add(entity).get().getId();
+    }
 
-	@Override
-	public String save(I entity, String id) throws Exception {
-		if (id == null || id.length() == 0) {
-			return getCollection().add(entity).get().getId();
-		}
+    @Override
+    public String update(I entity, String id) throws Exception {
+        DocumentReference reference = getCollection().document(id);
+        reference.set(entity);
+        return reference.getId();
+    }
 
-		DocumentReference reference = getCollection().document(id);
-		reference.set(entity);
-		return reference.getId();
-	}
+    @Override
+    public String save(I entity, String id) throws Exception {
+        if (id == null || id.length() == 0) {
+            return getCollection().add(entity).get().getId();
+        }
 
-	@Override
-	public void delete(String id) throws Exception {
-		getCollection().document(id).delete().get();
-	}
+        DocumentReference reference = getCollection().document(id);
+        reference.set(entity);
+        return reference.getId();
+    }
 
-	@Override
-	public O get(String id) throws Exception {
-		DocumentReference ref = getCollection().document(id);
-		ApiFuture<DocumentSnapshot> futureDoc = ref.get();
-		DocumentSnapshot document = futureDoc.get();
-		if (document.exists()) {
-			O object = document.toObject(clazz);
-			PropertyUtils.setProperty(object, "id", document.getId());
-			return object;
-		}
-		return null;
-	}
+    @Override
+    public void delete(String id) throws Exception {
+        getCollection().document(id).delete().get();
+    }
 
-	@Override
-	public List<O> getAll() throws Exception {
-		List<O> result = new ArrayList<O>();
-		ApiFuture<QuerySnapshot> query = getCollection().get();
-		List<QueryDocumentSnapshot> documents = query.get().getDocuments();
-		for (QueryDocumentSnapshot doc : documents) {
-			O object = doc.toObject(clazz);
-			PropertyUtils.setProperty(object, "id", doc.getId());
-			result.add(object);
-		}
-		return result;
-	}
+    @Override
+    public O get(String id) throws Exception {
+        DocumentReference ref = getCollection().document(id);
+        ApiFuture<DocumentSnapshot> futureDoc = ref.get();
+        DocumentSnapshot document = futureDoc.get();
+        if (document.exists()) {
+            O object = document.toObject(clazz);
+            PropertyUtils.setProperty(object, "id", document.getId());
+            return object;
+        }
+        return null;
+    }
 
-	@Override
-	public Map<String, Object> getAsMap(String id) throws Exception {
-		DocumentReference reference = getCollection().document(id);
-		ApiFuture<DocumentSnapshot> futureDoc = reference.get();
-		DocumentSnapshot document = futureDoc.get();
-		if (document.exists()) {
-			return document.getData();
-		}
-		return null;
-	}
+    @Override
+    public List<O> getAll() throws Exception {
+        List<O> result = new ArrayList<O>();
+        ApiFuture<QuerySnapshot> query = getCollection().get();
+        List<QueryDocumentSnapshot> documents = query.get().getDocuments();
+        for (QueryDocumentSnapshot doc : documents) {
+            O object = doc.toObject(clazz);
+            PropertyUtils.setProperty(object, "id", doc.getId());
+            result.add(object);
+        }
+        return result;
+    }
 
-	public abstract CollectionReference getCollection();
+    @Override
+    public Map<String, Object> getAsMap(String id) throws Exception {
+        DocumentReference reference = getCollection().document(id);
+        ApiFuture<DocumentSnapshot> futureDoc = reference.get();
+        DocumentSnapshot document = futureDoc.get();
+        if (document.exists()) {
+            return document.getData();
+        }
+        return null;
+    }
+
+    public abstract CollectionReference getCollection();
 }

@@ -6,6 +6,8 @@ import java.util.Map;
 public interface GenericServiceAPI<I,O> {
 
 	String save(I entity, String id) throws Exception;
+
+	String update(I entity, String id) throws Exception;
 	
 	String save(I entity) throws Exception;
 	

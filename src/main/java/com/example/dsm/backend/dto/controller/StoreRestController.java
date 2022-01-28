@@ -23,13 +23,15 @@ public class StoreRestController {
         return "Hola stores";
     }
 
-    @PostMapping(value = "/save/{id}")
-    public ResponseEntity<String> save(@RequestBody Store store, @PathVariable String id) throws Exception {
-        if (id == null || id.length() == 0 || id.equals("null")) {
-            id = storeServiceAPI.save(store);
-        } else {
-            storeServiceAPI.save(store, id);
-        }
+    @PostMapping("/save")
+    public ResponseEntity<String> save(@RequestBody Store store) throws Exception {
+        String id = storeServiceAPI.save(store);
+        return new ResponseEntity<String>(id, HttpStatus.OK);
+    }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<String> update(@RequestBody Store store, @PathVariable String id) throws Exception {
+        storeServiceAPI.update(store, id);
         return new ResponseEntity<String>(id, HttpStatus.OK);
     }
 
