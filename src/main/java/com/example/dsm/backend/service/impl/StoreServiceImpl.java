@@ -38,13 +38,32 @@ public class StoreServiceImpl extends GenericServiceImpl<Store, StoreDTO> implem
     }
 
     public boolean isClose(Double lat, Double lon, Double radius, Double latStore, Double lonStore) {
-        int distance = calculateDistanceByHaversineFormula(lat, lon, latStore, lonStore);
-        if (distance <= radius * 1000) {
+        Double distance = HaverSineDistance(lat, lon, latStore, lonStore);
+        //Double distance = calculateDistance(lat, lon, latStore, lonStore);
+        System.out.println("Distancia: " + distance);
+        if (distance <= radius) {
+            System.out.println("lat: " + lat + ", lon: " + lon);
+            System.out.println("Distancia: " + distance + " Radius: " + radius);
             return true;
         } else {
             return false;
         }
     }
+
+    public static double HaverSineDistance(double lat1, double lng1, double lat2, double lng2) { // mHager 08-12-2012 // http://en.wikipedia.org/wiki/Haversine_formula // Implementation // convert to radians
+        lat1 = Math.toRadians(lat1);
+        lng1 = Math.toRadians(lng1);
+        lat2 = Math.toRadians(lat2);
+        lng2 = Math.toRadians(lng2);
+        double dlon = lng2 - lng1;
+        double dlat = lat2 - lat1;
+        double a = Math.pow((Math.sin(dlat / 2)), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(dlon / 2), 2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        double dist = (3958.75 * c);
+        dist = Math.round(dist * 100.0) / 100.0;
+        return dist;
+    }
+/*
 
     private int calculateDistanceByHaversineFormula(Double lon1, Double lat1,
                                                     Double lon2, Double lat2) {
@@ -68,6 +87,25 @@ public class StoreServiceImpl extends GenericServiceImpl<Store, StoreDTO> implem
 
         return (int) distanceInMeters;
     }
+
+    private Double calculateDistance(Double lon1, Double lat1,
+                                     Double lon2, Double lat2) {
+        final int R = 6371; // Radious of the earth
+
+        Double latDistance = toRad(lat2 - lat1);
+        Double lonDistance = toRad(lon2 - lon1);
+        Double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2) +
+                Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+                        Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
+        Double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        Double distance = R * c;
+        return distance;
+    }
+
+    private Double toRad(Double value) {
+        return value * Math.PI / 180;
+    }
+*/
 
 
 /*    @Override
