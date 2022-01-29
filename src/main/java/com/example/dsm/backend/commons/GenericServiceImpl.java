@@ -4,6 +4,7 @@ import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.*;
 
 import org.apache.commons.beanutils.PropertyUtils;
+import org.springframework.http.HttpStatus;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
@@ -26,9 +27,18 @@ public abstract class GenericServiceImpl<I, O> implements GenericServiceAPI<I, O
 
     @Override
     public String update(I entity, String id) throws Exception {
-        DocumentReference reference = getCollection().document(id);
-        reference.set(entity);
-        return reference.getId();
+        DocumentReference ref = getCollection().document(id);
+        ApiFuture<DocumentSnapshot> futureDoc = ref.get();
+        DocumentSnapshot document = futureDoc.get();
+
+        if (document.exists()) {
+            ref = getCollection().document(id);
+            ref.set(entity);
+
+            return ref.getId();
+        } else {
+            return "No existe el registro";
+        }
     }
 
     @Override

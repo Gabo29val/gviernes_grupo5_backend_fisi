@@ -31,8 +31,8 @@ public class StoreRestController {
 
     @PutMapping("/update/{id}")
     public ResponseEntity<String> update(@RequestBody Store store, @PathVariable String id) throws Exception {
-        storeServiceAPI.update(store, id);
-        return new ResponseEntity<String>(id, HttpStatus.OK);
+        String res = storeServiceAPI.update(store, id);
+        return new ResponseEntity<String>(res, HttpStatus.OK);
     }
 
     @GetMapping(value = "/stores/{lat},{lon},{radius}")
