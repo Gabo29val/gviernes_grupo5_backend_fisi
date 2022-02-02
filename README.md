@@ -5,9 +5,9 @@ Curso: Desarrollo de Sistemas Móviles
 Docente: Bruno Palacios - bfpalacios@gmail.com
 ---
 
-Rama development (rama principal de desarrollo frontend)
+Rama development (rama principal de desarrollo backend)
 ==
-Esta rama contiene el proyecto principal del **frontend** de la aplicación "Minimarket de barrio".
+Esta rama contiene el proyecto principal del **backend** de la aplicación "Minimarket de barrio".
 
 ### Herramientas utilizadas
 
