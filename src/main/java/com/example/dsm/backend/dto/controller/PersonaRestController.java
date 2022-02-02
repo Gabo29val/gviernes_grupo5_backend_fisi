@@ -23,17 +23,17 @@ public class PersonaRestController {
         return "Hola personas";
     }
 
-    @GetMapping(value = "/all")
+    @GetMapping(value = "all")
     public List<PersonaDTO> getAll() throws Exception {
         return personaServiceAPI.getAll();
     }
 
-    @GetMapping(value = "/find/{id}")
+    @GetMapping(value = "find/{id}")
     public PersonaDTO find(@PathVariable String id) throws Exception {
         return personaServiceAPI.get(id);
     }
 
-    @PostMapping(value = "/save/{id}")
+    @PostMapping(value = "save/{id}")
     public ResponseEntity<String> save(@RequestBody Persona persona, @PathVariable String id) throws Exception {
         if (id == null || id.length() == 0 || id.equals("null")) {
             id = personaServiceAPI.save(persona);
@@ -43,7 +43,7 @@ public class PersonaRestController {
         return new ResponseEntity<String>(id, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/delete/{id}")
+    @GetMapping(value = "delete/{id}")
     public ResponseEntity<PersonaDTO> delete(@PathVariable String id) throws Exception {
         PersonaDTO persona = personaServiceAPI.get(id);
         if (persona != null) {

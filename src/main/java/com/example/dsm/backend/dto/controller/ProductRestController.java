@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/products/api/v1/")
+@RequestMapping(value = "/minimarket/api/v1/products/")
 @CrossOrigin("*")
 public class ProductRestController {
 
     @Autowired
     private ProductServiceAPI productServiceAPI;
 
-    @GetMapping("/saludo")
+    @GetMapping("saludo")
     public String saludo() {
         return "Hola products";
     }
@@ -33,7 +33,7 @@ public class ProductRestController {
         return new ResponseEntity<String>(id, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/all")
+    @GetMapping(value = "all")
     public List<ProductDTO> getAll() throws Exception {
         return productServiceAPI.getAll();
     }
