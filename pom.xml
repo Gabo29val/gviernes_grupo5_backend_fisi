@@ -42,6 +42,11 @@
 			<artifactId>commons-beanutils</artifactId>
 			<version>1.9.3</version>
 		</dependency>
+		<dependency>
+			<groupId>com.stripe</groupId>
+			<artifactId>stripe-java</artifactId>
+			<version>20.97.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
