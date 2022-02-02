@@ -13,6 +13,7 @@ public class ProductDTO {
     private String nameStore;
     private Double price;
     private String photoUrl;
+    private String description;
     private int stock;
     private List<Product.Specification> specifications;
 

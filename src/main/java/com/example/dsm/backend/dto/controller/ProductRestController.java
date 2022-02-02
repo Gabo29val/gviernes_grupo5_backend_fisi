@@ -23,7 +23,7 @@ public class ProductRestController {
         return "Hola products";
     }
 
-    @PostMapping(value = "/save/{id}")
+    @PostMapping(value = "save/{id}")
     public ResponseEntity<String> save(@RequestBody Product product, @PathVariable String id) throws Exception {
         if (id == null || id.length() == 0 || id.equals("null")) {
             id = productServiceAPI.save(product);
@@ -36,6 +36,11 @@ public class ProductRestController {
     @GetMapping(value = "all")
     public List<ProductDTO> getAll() throws Exception {
         return productServiceAPI.getAll();
+    }
+
+    @GetMapping(value = "search/{palabra}")
+    public List<ProductDTO> getProductsForWord(@PathVariable String palabra) throws Exception {
+        return productServiceAPI.getProductsForWord(palabra);
     }
 
 }
