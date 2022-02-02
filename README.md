@@ -17,11 +17,19 @@ Esta rama contiene el proyecto principal del **backend** de la aplicación "Mini
     En conjunto, la asistencia de codificación inteligente y el diseño ergonómico hacen que el 
     desarrollo no solo sea productivo sino también agradable.
     
-*   **Kotlin** 
+*   **Java** 
     
-    Crea mejores apps para Android más rápido con Kotlin, un lenguaje de programación moderno de tipo estático que usan más del 60% de los desarrolladores profesionales de         Android. Kotlin te ayuda a aumentar la productividad, la satisfacción de los desarrolladores y la seguridad del código.
+    Java es un lenguaje de programación y una plataforma informática comercializada por primera vez en 1995 por Sun Microsystems. 
+    Hay muchas aplicaciones y sitios web que no    funcionarán a menos que tenga Java instalado y cada día se crean más. 
+    Java es rápido, seguro y fiable. Desde portátiles hasta centros de datos, desde consolas para juegos hasta súper computadoras, 
+    desde teléfonos móviles hasta Internet, Java está en todas partes.
+    
+*   **Postman**
+    
+    Postman es una plataforma API para crear y usar API. Postman simplifica cada paso del ciclo de vida de la API y optimiza la 
+    colaboración para que pueda crear mejores API, más rápido.
 
-### Guía de instalación
+### Guía de descarga
 
 *   Clonar el repositorio usando el comando:
 
@@ -31,9 +39,17 @@ Esta rama contiene el proyecto principal del **backend** de la aplicación "Mini
 
 *   Abrir el proyecto en IntelliJ IDEA
 
-*   Antes de ejecutar el proyecto del frontend se debe tener descargado y en ejecución el backend que se encuentra en el siguiente enlace:
-    
-    https://github.com/Gabo29val/gviernes_grupo5_backend_fisi.git
+### Para probar el backend
 
-*   Ahora sí ya puede ejecutar el proyecto del frontend.
+*   Tener una cuenta en postman
+    
+*   Ejecutar el siguiente archivo JSON:
+    
+### Para ejecutar el proyecto Minimarket de barrio (backend y frontend) 
+
+*   Ejecutar el backend y luego frontend (descargar y ejecutar) del siguiente enlace:
+    
+    https://github.com/Gabo29val/gviernes_grupo5_frontend_fisi.git
+
+*   Ahora puede usar la aplicación del proyecto Minimarket de Barrio en su celular o en el emulador de Android Studio
 
