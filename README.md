@@ -42,6 +42,12 @@ Esta rama contiene el proyecto principal del **backend** de la aplicación "Mini
     
     * Springboot
       Java Spring Boot es una de las herramientas principales del ecosistema de desarrollo web backend con Java.
+      
+*   **Stripe**
+    
+    Reunimos todo lo necesario para desarrollar sitios web y aplicaciones capaces de aceptar pagos y hacer transferencias en todo el mundo. 
+    Los productos de Stripe impulsan pagos para minoristas que operan en Internet y en persona, empresas dedicadas a las suscripciones, 
+    plataformas de software y marketplaces, y mucho más.
 
 ### Guía de descarga
 
