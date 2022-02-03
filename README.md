@@ -49,6 +49,13 @@ Esta rama contiene el proyecto principal del **backend** de la aplicación "Mini
     Los productos de Stripe impulsan pagos para minoristas que operan en Internet y en persona, empresas dedicadas a las suscripciones, 
     plataformas de software y marketplaces, y mucho más.
 
+*   **Firebase**
+    
+    Firebase es una plataforma para el desarrollo de aplicaciones web y aplicaciones móviles lanzada en 2011 y adquirida por Google en 2014.
+    Es una plataforma ubicada en la nube, integrada con Google Cloud Platform, que usa un conjunto de herramientas para la creación y sincronización 
+    de proyectos que serán dotados de alta calidad, haciendo posible el crecimiento del número de usuarios y dando resultado también a la obtención 
+    de una mayor monetización.
+
 ### Guía de descarga
 
 *   Clonar el repositorio usando el comando:
