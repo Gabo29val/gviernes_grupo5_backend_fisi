@@ -8,6 +8,7 @@ public class Store{
     private String photoUrl;
     private Double rating;
     private String address;
+    private String telephone;
     private Location location;
 
     @Data

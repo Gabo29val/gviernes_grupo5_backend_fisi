@@ -12,6 +12,7 @@ public class StoreDTO implements Serializable {
     private String photoUrl;
     private Double rating;
     private String address;
+    private String telephone;
     private Store.Location location;
 
     @Data
