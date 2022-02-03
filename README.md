@@ -66,6 +66,9 @@ Esta rama contiene el proyecto principal del **backend** de la aplicación "Mini
 *   Visitar el siguiente enlace para ver el postman del proceso **Visualizar tiendas cercanas**:
     https://documenter.getpostman.com/view/19333688/UVeFMmBc
     
+*   Visitar el siguiente enlace para ver el postman del proceso **Realizar pago de un pedido**:
+    https://documenter.getpostman.com/view/15638375/UVeFMSEW
+    
 ### Para ejecutar el proyecto Minimarket de barrio (backend y frontend) 
 
 *   Ejecutar el backend y luego frontend (descargar y ejecutar) del siguiente enlace:
