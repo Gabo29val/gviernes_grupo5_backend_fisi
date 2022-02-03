@@ -34,14 +34,6 @@ Esta rama contiene el proyecto principal del **backend** de la aplicación "Mini
     de forma automática a su objeto, esto facilita mucho realizar peticiones a un API y procesar la respuesta.
 
     Link de Retrofit: https://square.github.io/retrofit/
-
-*   **Spring**
-
-    Spring hace que programar Java sea más rápido, fácil y seguro para todos. El enfoque de Spring en la velocidad, la simplicidad y la 
-    productividad lo ha convertido en el marco Java más popular del mundo.
-    
-    * Springboot
-      Java Spring Boot es una de las herramientas principales del ecosistema de desarrollo web backend con Java.
       
 *   **Stripe**
     
