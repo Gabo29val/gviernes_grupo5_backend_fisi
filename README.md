@@ -28,13 +28,15 @@ Esta rama contiene el proyecto principal del **backend** de la aplicación "Mini
     
     Postman es una plataforma API para crear y usar API. Postman simplifica cada paso del ciclo de vida de la API y optimiza la 
     colaboración para que pueda crear mejores API, más rápido.
-    
-*   **Retrofit**    
-    Retrofit es una librería para Android y java compatible con Kotlin para hacer llamadas de red, obtener el resultado y “parsearlo” 
-    de forma automática a su objeto, esto facilita mucho realizar peticiones a un API y procesar la respuesta.
 
-    Link de Retrofit: https://square.github.io/retrofit/
-      
+*   **Spring**
+
+    Spring hace que programar Java sea más rápido, fácil y seguro para todos. El enfoque de Spring en la velocidad, la simplicidad y la 
+    productividad lo ha convertido en el marco Java más popular del mundo.
+    
+    * Springboot
+      Java Spring Boot es una de las herramientas principales del ecosistema de desarrollo web backend con Java.  
+ 
 *   **Stripe**
     
     Reunimos todo lo necesario para desarrollar sitios web y aplicaciones capaces de aceptar pagos y hacer transferencias en todo el mundo. 
