@@ -38,9 +38,9 @@ public class ProductRestController {
         return productServiceAPI.getAll();
     }
 
-    @GetMapping(value = "search/{palabra}")
-    public List<ProductDTO> getProductsForWord(@PathVariable String palabra) throws Exception {
-        return productServiceAPI.getProductsForWord(palabra);
+    @GetMapping(value = "search/{word}")
+    public List<ProductDTO> getProductsByWord(@PathVariable String word) throws Exception {
+        return productServiceAPI.getProductsByWord(word);
     }
 
 }
